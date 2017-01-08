@@ -1,5 +1,5 @@
 /*global describe, it*/
-
+"use strict";
 const chai = require('chai')
 const fs = require('fs')
 const jsdom = require('mocha-jsdom')
@@ -58,7 +58,6 @@ describe('loops', () => {
     it('removes elements from `array` until `array` is empty or until `maybeTrue()` returns `false`', () => {
       const [array, t] = makeArray()
       const l = array.length
-
       const newArray = doWhileLoop(array)
 
       expect(newArray).to.have.length.of.at.most(l - 1)
